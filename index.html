@@ -14,7 +14,6 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
     <!-- boostrap icons -->
     <link
       rel="stylesheet"
@@ -29,11 +28,15 @@
     <title>Dian's Portfolio</title>
   </head>
 
-  <body id="home">
+  <body id="home" class="bg-light">
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg bg-white shadow-sm fixed-top">
+    <nav
+      class="navbar navbar-expand-lg bg-light navbar-light shadow-sm navbar-absolute fixed-top fs-5"
+    >
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Dian's Portfolio</a>
+        <a class="navbar-brand fw-bold fs-3" href="#home" style="color: #5e3bee"
+          >Dian's Portfolio</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -68,18 +71,19 @@
     <!-- akhir navbar -->
 
     <!-- jumbotron -->
-    <section class="jumbotron d-flex align-items-center">
+    <section class="jumbotron d-flex align-items-center mt-5 bg-light">
       <div class="container">
         <div class="row justify-content-end">
           <div class="col-md-6">
             <h6 class="display-4 fw-bold">Hello, I'm Dian!</h6>
             <p class="lead">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              dicta tempora vitae, laborum nemo at?
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
+              ab harum eveniet voluptatum cumque facilis, sed quaerat quia
+              blanditiis rerum.
             </p>
-            <a class="btn" href="#" role="button">Projects</a>
+            <a class="btn" href="#projects" role="button">Projects</a>
           </div>
-          <div class="col-md-6 text-center mt-4">
+          <div class="col-md-6 text-center mt-2">
             <img
               src="img/profile-dian.png"
               alt="Dian Rahmawati"
@@ -93,16 +97,16 @@
     <!-- akhir jumbotron -->
 
     <!-- Section About -->
-    <section id="about" class="py-5">
+    <section id="about" class="py-5" style="background-color: var(--primary)">
       <div class="container">
         <div class="row">
           <div class="col text-center">
-            <h2 class="mb-4">About Me</h2>
+            <h2 class="mb-5">About Me</h2>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-6">
-            <div class="card h-100 shadow p-3 border-0 mb-4">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow h-100 p-3 border-0 mb-4">
               <div class="card-body">
                 <h4 class="card-title mb-4">About Me</h4>
                 <p class="card-text">
@@ -112,12 +116,12 @@
                   Sapiente, labore ea porro quibusdam reiciendis nam maxime,
                   magni ducimus quae corrupti nihil veritatis delectus!
                 </p>
-                <a class="btn" href="#" role="button">Resume</a>
+                <a class="btn mt-3" href="#" role="button">Resume</a>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <div class="card h-100 shadow p-3 border-0 mb-4">
+          <div class="col-md-6 mb-4">
+            <div class="card shadow h-100 p-3 border-0 mb-4">
               <div class="card-body">
                 <h4 class="card-title mb-4">My Skills</h4>
                 <ul class="list-group">
@@ -151,7 +155,7 @@
         <h2 class="text-center mb-5">My Projects</h2>
         <div class="row">
           <div class="col-md-4 mb-4">
-            <div class="card shadow p-2 border-0">
+            <div class="card shadow p-2 border-2">
               <div
                 id="carouselExampleIndicators1"
                 class="carousel slide"
@@ -395,7 +399,7 @@
     <!-- akhir projects -->
 
     <!-- contact -->
-    <section id="contact" class="py-5">
+    <section id="contact" class="py-5" style="background-color: #fff">
       <div class="container">
         <h2 class="text-center mb-5">Contact Me</h2>
         <div class="row">
@@ -417,29 +421,48 @@
                     <i class="bi bi-envelope-fill me-2"></i>diianrhhma@gmail.com
                   </li>
                   <li class="list-group-item">
-                    <i class="bi bi-telephone-fill me-2"></i>+62 123 456 789
+                    <i class="bi bi-telephone-fill me-2"></i>+6282122773698
                   </li>
                 </ul>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <form name="contact" method="POST" data-netlify="true">
+          <div class="col-md-6 mt-4">
+            <form
+              name="contact"
+              method="POST"
+              data-netlify="true"
+              onsubmit="return false"
+            >
               <div class="mb-3">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" />
+                <input type="text" class="form-control" id="name" name="name" />
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="email" />
+                <input
+                  type="email"
+                  class="form-control"
+                  id="email"
+                  name="email"
+                />
               </div>
               <div class="mb-3">
                 <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="5"></textarea>
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="5"
+                ></textarea>
               </div>
-              <a class="btn submit" href="#" role="button" type="submit"
+              <a
+                class="btn submit"
+                href="javascript:void(0)"
+                onclick="submitForm()"
                 >Submit</a
               >
+              <div id="alert-container" class="mt-3"></div>
             </form>
           </div>
         </div>
@@ -448,7 +471,7 @@
     <!-- akhir contact -->
 
     <!-- footer -->
-    <footer class="text-grey py-3 bg-light">
+    <footer class="text-grey py-3 mt-3 mb-4">
       <div class="container">
         <div class="row">
           <div class="col text-start">
