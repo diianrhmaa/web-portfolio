@@ -64,3 +64,16 @@ function showAlert(type, message) {
     alertContainer.removeChild(alert);
   }, 5000);
 }
+
+const bShow = document.querySelector("#b-more");
+const bLess = document.querySelector("#b-less");
+
+bShow.addEventListener("click", function () {
+  bLess.classList.remove("visually-hidden");
+  bShow.classList.add("visually-hidden");
+});
+
+bLess.addEventListener("click", function () {
+  bShow.classList.remove("visually-hidden");
+  bLess.classList.add("visually-hidden");
+});
