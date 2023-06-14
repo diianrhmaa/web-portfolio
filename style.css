@@ -69,25 +69,27 @@ h5 {
 /* tablet */
 @media (max-width: 758px) {
   html {
-    padding: 1rem;
     font-size: 78.5%;
+
   }
 
-  .navbar-brand{
-    padding: 1rem;
+  .row, .navbar{
+    padding: 1.5rem;
   }
+
 }
 
 /* handphone */
 @media (max-width: 450px) {
   html {
-    padding: 1rem;
     font-size: 75.5%;
   }
 
-  .navbar-brand{
-    padding: 1rem;
+  .row, .navbar{
+    padding: 1.5rem;
   }
+
+
 }
 
 
